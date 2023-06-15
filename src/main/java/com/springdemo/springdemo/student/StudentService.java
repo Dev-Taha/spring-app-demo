@@ -1,28 +1,13 @@
 package com.springdemo.springdemo.student;
 
-import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 import java.util.List;
-@Service
-public class StudentService {
+import java.util.Optional;
 
-    public List<Student> findAllStudent(){
-        return List.of(
-                new Student(
-                        "Taha",
-                        "Shorafa",
-                        LocalDate.now(),
-                        "taha@boha.com",
-                        21
-                ),
-                new Student(
-                        "Ahmed",
-                        "Ismail",
-                        LocalDate.now(),
-                        "ahmed@boha.com",
-                        25
-                )
-        );
-    }
+public interface StudentService {
+
+    Student save(Student student);
+    List<Student> findAllStudent();
+    Optional<Student> findByEmail(String email);
+    Student update(Student student);
+    void delete (String email);
 }
