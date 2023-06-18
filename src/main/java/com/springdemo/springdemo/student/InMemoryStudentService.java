@@ -24,8 +24,11 @@ public class InMemoryStudentService implements StudentService{
     }
 
     @Override
-    public Optional<Student> findByEmail(String email) {
-        return DataAccessObject.findByEmail(email);
+    public Student findByEmail(String email) {
+//        return DataAccessObject.findByEmail(email);
+        Student s = new Student();
+        // refactor later
+        return s;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.springdemo.springdemo.student;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +13,8 @@ public class StudentController {
     // constructor injection with studentController using @Autowired
     // without @Autowired is already injected suing initiation constructor
     private StudentService service; // field injection with studentController using @Autowired
-    public StudentController(StudentService service){
+    public StudentController(
+            @Qualifier("DBStudentService") StudentService service){
         this.service = service;
     }
 
@@ -21,7 +23,7 @@ public class StudentController {
         return service.save(student);
     }
     @GetMapping("/{email}")
-    public Optional<Student> findByEmail(@PathVariable("email") String email){
+    public Student findByEmail(@PathVariable("email") String email){
         return service.findByEmail(email);
     }
     @GetMapping

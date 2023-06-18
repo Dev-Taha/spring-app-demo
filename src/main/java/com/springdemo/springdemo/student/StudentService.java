@@ -7,7 +7,7 @@ public interface StudentService {
 
     Student save(Student student);
     List<Student> findAllStudent();
-    Optional<Student> findByEmail(String email);
+    Student findByEmail(String email);
     Student update(Student student);
     void delete (String email);
 }
