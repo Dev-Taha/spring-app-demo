@@ -1,7 +1,8 @@
-package com.springdemo.springdemo.student;
+package com.springdemo.springdemo.Service;
+
+import com.springdemo.springdemo.Models.Student;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface StudentService {
 

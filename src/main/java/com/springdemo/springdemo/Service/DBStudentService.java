@@ -1,13 +1,14 @@
-package com.springdemo.springdemo.student;
+package com.springdemo.springdemo.Service;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
+import com.springdemo.springdemo.Models.Student;
+import com.springdemo.springdemo.Repository.StudentRepository;
+import com.springdemo.springdemo.Service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service // TODO: OR USE @Primary rather than from @Qualifier in Controller
-public class DBStudentService implements StudentService{
+public class DBStudentService implements StudentService {
     private final StudentRepository repository;
 
     public DBStudentService(StudentRepository repository) {

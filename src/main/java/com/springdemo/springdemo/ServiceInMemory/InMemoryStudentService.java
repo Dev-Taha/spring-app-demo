@@ -1,12 +1,14 @@
-package com.springdemo.springdemo.student;
+package com.springdemo.springdemo.ServiceInMemory;
 
+import com.springdemo.springdemo.Models.Student;
+import com.springdemo.springdemo.Service.StudentService;
+import com.springdemo.springdemo.Repository.InMemoryStudentDAO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class InMemoryStudentService implements StudentService{
+public class InMemoryStudentService implements StudentService {
     private final InMemoryStudentDAO DataAccessObject ;
 
     public InMemoryStudentService(InMemoryStudentDAO dataAccessObject) {

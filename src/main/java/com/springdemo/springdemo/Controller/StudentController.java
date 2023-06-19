@@ -1,10 +1,11 @@
-package com.springdemo.springdemo.student;
+package com.springdemo.springdemo.Controller;
 
+import com.springdemo.springdemo.Models.Student;
+import com.springdemo.springdemo.Service.StudentService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/students")
